@@ -13,12 +13,15 @@ class WorkoutsController < ApplicationController
   end
 
   # GET /workouts/new
-  def new
-    @workout = Workout.new
-  end
+  # def new
+  #   @workout = Workout.new
+  # end
 
   # GET /workouts/1/edit
   def edit
+    @user = @workout.user
+    @exercises = Exercise.order('name ASC')
+
   end
 
   # POST /workouts
@@ -40,6 +43,7 @@ class WorkoutsController < ApplicationController
   # PATCH/PUT /workouts/1
   # PATCH/PUT /workouts/1.json
   def update
+    @workout.exercise_ids = params[:workout][:exercise_ids]
     respond_to do |format|
       if @workout.update(workout_params)
         format.html { redirect_to @workout, notice: 'Workout was successfully updated.' }
@@ -67,8 +71,9 @@ class WorkoutsController < ApplicationController
       @workout = Workout.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def workout_params
-      params.require(:workout).permit(:day, :name, :user_id)
+      params.require(:workout).permit(:day, :name, :user_id, :exercise_ids)
     end
 end

@@ -20,9 +20,18 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.label :user %><br>
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <%= @user.name %>
   </div>
+  <div class="field">
+    <%= f.label :exercises %><br>
+      <% @exercises.each do |exercise|%>
+      <%= exercise.name %>
+      <%= check_box_tag :exercise_ids, exercise.id, @workout.exercises.include?(exercise), :name => 'workout[exercise_ids][]'  %>
+      <% end %>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

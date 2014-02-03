@@ -10,37 +10,43 @@ User.create(
 Workout.create(
   :day => 'Monday',
   :name => 'Cardio',
-  :user_id => User.first
+  :user_id => User.first.id
 )
+
 Workout.create(
   :day => 'Tuesday',
   :name => 'Legs Day',
-  :user_id => User.first
+  :user_id => User.first.id
 )
+
 Workout.create(
   :day => 'Wednesday',
   :name => 'Arms Day',
-  :user_id => User.first
+  :user_id => User.first.id
 )
+
 Workout.create(
   :day => 'Thursday',
   :name => 'Squats',
-  :user_id => User.first
+  :user_id => User.first.id
 )
+
 Workout.create(
   :day => 'Friday',
   :name => 'Cardio',
-  :user_id => User.first
+  :user_id => User.first.id
 )
+
 Workout.create(
   :day => 'Saturday',
   :name => 'HIIT',
-  :user_id => User.first
+  :user_id => User.first.id
 )
+
 Workout.create(
   :day => 'Sunday',
   :name => 'LISS',
-  :user_id => User.first
+  :user_id => User.first.id
 )
 
 Exercise.create(
