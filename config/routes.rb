@@ -3,6 +3,7 @@ Evitca::Application.routes.draw do
   resources :exercises
 
   resources :workouts
-
+  resources :exercise_workouts
+  
   root :to => 'pages#home'
 end

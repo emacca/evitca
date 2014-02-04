@@ -14,6 +14,7 @@ class WorkoutsController < ApplicationController
       @workouts = current_user.workouts.create(:day => 'Sunday')
     else
     @workouts = current_user.workouts.order('created_at ASC')
+    @exercises = ExerciseWorkout.all
     end
   end
 

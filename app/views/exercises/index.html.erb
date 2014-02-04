@@ -20,8 +20,6 @@
         <td><%= exercise.description %></td>
         <td><%= exercise.category %></td>
         <td><%= link_to 'Show', exercise %></td>
-        <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
-        <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,6 +27,7 @@
 
 <br>
 
+<%= link_to 'all', exercises_path %>
 <%= link_to 'Filter Upper Body', :filter => 'Upper Body' %>
 <%= link_to 'Filter Lower Body', :filter => 'Lower Body' %>
 <%= link_to 'Filter Core', :filter => 'Core' %>

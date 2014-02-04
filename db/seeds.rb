@@ -1,12 +1,14 @@
 User.destroy_all
 Workout.destroy_all
 Exercise.destroy_all
+ExerciseWorkout.destroy_all
 
 user = User.new 
 user.email = 'emacca@me.com'
 user.password = 'password'
 user.password_confirmation = 'password'
 user.save
+
 
 Workout.create(
   :day => 'Monday',
@@ -85,4 +87,11 @@ Exercise.create(
   :image => 'http://www.womenshealthmag.com/files/images/0906-dbell-chest-press.jpg',
   :description => 'The push up may just be the perfect total body exercise that builds both upper body and core strength. Done properly, it is a compound exercise that uses muscles in the chest, shoulders, triceps, back, abs and even the legs.',
   :category => 'Lower Body'
+)
+
+ExerciseWorkout.create(
+  :exercise_id => Exercise.first.id,
+  :workout_id => Workout.first.id,
+  :reps => 15,
+  :times => 3
 )

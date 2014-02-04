@@ -12,8 +12,12 @@
 
 <p>
   <strong>Exercises:</strong>
-  <% @workout.exercises.each do |exercise| %>
-        <td><%= link_to exercise.name, exercise_path(exercise) %></td>
+  <% @workout.exercise_workouts.each do |exercise_workout| %>
+        <td><%= link_to exercise_workout.exercise.name, exercise_path(exercise_workout.exercise) %></td>
+        <p><%= exercise_workout.reps%></p>
+        <p><%= exercise_workout.times%></p>
+        <p><%= link_to 'add', edit_exercise_workout_path(exercise_workout) %></p>
+
         <% end %>
 </p>
 

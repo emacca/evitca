@@ -1,4 +1,4 @@
-class CreateExerciseWorkouts < ActiveRecord::Migration
+class CreateExerciseWorkout < ActiveRecord::Migration
   def change
     create_table :exercise_workouts do |t|
       t.references :exercise, index: true
