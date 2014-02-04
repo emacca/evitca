@@ -15,5 +15,12 @@
   <%= @workout.user.name %>
 </p>
 
+<p>
+  <strong>Exercises:</strong>
+  <% @workout.exercises.each do |exercise| %>
+        <td><%= link_to exercise.name, exercise_path(exercise) %></td>
+        <% end %>
+</p>
+
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>

@@ -10,6 +10,7 @@ class WorkoutsController < ApplicationController
   # GET /workouts/1
   # GET /workouts/1.json
   def show
+    @exercises = Exercise.order('name ASC')
   end
 
   # GET /workouts/new

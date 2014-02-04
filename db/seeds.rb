@@ -2,51 +2,52 @@ User.destroy_all
 Workout.destroy_all
 Exercise.destroy_all
 
-
-User.create(
-  :name => 'Emily'
-)
+user = User.new 
+user.email = 'emacca@me.com'
+user.password = 'password'
+user.password_confirmation = 'password'
+user.save
 
 Workout.create(
   :day => 'Monday',
   :name => 'Cardio',
-  :user_id => User.first.id
+  :user_id => User.first
 )
 
 Workout.create(
   :day => 'Tuesday',
   :name => 'Legs Day',
-  :user_id => User.first.id
+  :user_id => User.first
 )
 
 Workout.create(
   :day => 'Wednesday',
   :name => 'Arms Day',
-  :user_id => User.first.id
+  :user_id => User.first
 )
 
 Workout.create(
   :day => 'Thursday',
   :name => 'Squats',
-  :user_id => User.first.id
+  :user_id => User.first
 )
 
 Workout.create(
   :day => 'Friday',
   :name => 'Cardio',
-  :user_id => User.first.id
+  :user_id => User.first
 )
 
 Workout.create(
   :day => 'Saturday',
   :name => 'HIIT',
-  :user_id => User.first.id
+  :user_id => User.first
 )
 
 Workout.create(
   :day => 'Sunday',
   :name => 'LISS',
-  :user_id => User.first.id
+  :user_id => User.first
 )
 
 Exercise.create(
