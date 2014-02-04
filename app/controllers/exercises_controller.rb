@@ -4,7 +4,15 @@ class ExercisesController < ApplicationController
   # GET /exercises
   # GET /exercises.json
   def index
-    @exercises = Exercise.all
+    # @exercises = Exercise.order(params[:sort])
+    #@bicep_exercises = @exercises.select { |exercise| exercise.category == 'bicep' }
+
+    if params[:filter].present?
+      @exercises = Exercise.where('category = ?', params[:filter])
+    else
+      @exercises = Exercise.all
+    end
+
   end
 
   # GET /exercises/1

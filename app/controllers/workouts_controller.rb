@@ -4,19 +4,26 @@ class WorkoutsController < ApplicationController
   # GET /workouts
   # GET /workouts.json
   def index
-    @workouts = Workout.all
+    if current_user.workouts.blank?
+      @workouts = current_user.workouts.create(:day => 'Monday')
+      @workouts = current_user.workouts.create(:day => 'Tuesday')
+      @workouts = current_user.workouts.create(:day => 'Wednesday')
+      @workouts = current_user.workouts.create(:day => 'Thursday')
+      @workouts = current_user.workouts.create(:day => 'Friday')
+      @workouts = current_user.workouts.create(:day => 'Saturday')
+      @workouts = current_user.workouts.create(:day => 'Sunday')
+    else
+    @workouts = current_user.workouts.order('created_at ASC')
+    end
   end
 
   # GET /workouts/1
   # GET /workouts/1.json
   def show
     @exercises = Exercise.order('name ASC')
+
   end
 
-  # GET /workouts/new
-  # def new
-  #   @workout = Workout.new
-  # end
 
   # GET /workouts/1/edit
   def edit
@@ -25,22 +32,7 @@ class WorkoutsController < ApplicationController
 
   end
 
-  # POST /workouts
-  # POST /workouts.json
-  def create
-    @workout = Workout.new(workout_params)
-
-    respond_to do |format|
-      if @workout.save
-        format.html { redirect_to @workout, notice: 'Workout was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @workout }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @workout.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
+ 
   # PATCH/PUT /workouts/1
   # PATCH/PUT /workouts/1.json
   def update
@@ -58,13 +50,13 @@ class WorkoutsController < ApplicationController
 
   # DELETE /workouts/1
   # DELETE /workouts/1.json
-  def destroy
-    @workout.destroy
-    respond_to do |format|
-      format.html { redirect_to workouts_url }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @workout.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to workouts_url }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
