@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :workouts
+  
+  after_create do
+    workouts.create(:day => 'Monday')
+    workouts.create(:day => 'Tuesday')
+    workouts.create(:day => 'Wednesday')
+    workouts.create(:day => 'Thursday')
+    workouts.create(:day => 'Friday')
+    workouts.create(:day => 'Saturday')
+    workouts.create(:day => 'Sunday')
+  end
 end

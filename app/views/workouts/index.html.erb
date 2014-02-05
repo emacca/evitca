@@ -1,31 +1,24 @@
-<h1>Listing workouts</h1>
+<h1>my workouts</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <% @workouts.each do |workout| %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Day</th>
-      <th>Name</th>
-      <th>exercises</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+          <div class="col-sm-1 col-md-1 col-lg-1 workout_home">
+          <h3><%= workout.day %></h3>
+          <h4><%= workout.name %></h4>
+          <% workout.exercises.each do |exercise| %>
+          <p><%= exercise.name %></p>
+          <% end %>
+          <div class="buttons_bottom">
+          <p><%= link_to 'Show', workout, :class => "btn btn-default btn-sm btn-block" %>
+          <%= link_to 'Edit', edit_workout_path(workout), :class => "btn btn-default btn-sm btn-block" %></p>
+          </div>
+        </div>
+      
+      <% end %>
+    </div>    
+  </div>
 
-  <tbody>
-    <% @workouts.each do |workout| %>
-      <tr>
-        <td><%= workout.day %></td>
-        <td><%= workout.name %></td>
-        <% workout.exercises.each do |exercise| %>
-        <td><%= exercise.name %></td>
-        <% end %>
-        <td><%= link_to 'Show', workout %></td>
-        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 

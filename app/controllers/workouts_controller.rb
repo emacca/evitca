@@ -4,18 +4,10 @@ class WorkoutsController < ApplicationController
   # GET /workouts
   # GET /workouts.json
   def index
-    if current_user.workouts.blank?
-      @workouts = current_user.workouts.create(:day => 'Monday')
-      @workouts = current_user.workouts.create(:day => 'Tuesday')
-      @workouts = current_user.workouts.create(:day => 'Wednesday')
-      @workouts = current_user.workouts.create(:day => 'Thursday')
-      @workouts = current_user.workouts.create(:day => 'Friday')
-      @workouts = current_user.workouts.create(:day => 'Saturday')
-      @workouts = current_user.workouts.create(:day => 'Sunday')
-    else
+    
     @workouts = current_user.workouts.order('created_at ASC')
     @exercises = ExerciseWorkout.all
-    end
+    
   end
 
   # GET /workouts/1
