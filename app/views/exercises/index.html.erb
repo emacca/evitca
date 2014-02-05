@@ -1,36 +1,26 @@
-<h1>Listing exercises</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @exercises.each do |exercise| %>
-      <tr>
-        <td><%= exercise.name %></td>
-        <td><%= exercise.image %></td>
-        <td><%= exercise.description %></td>
-        <td><%= exercise.category %></td>
-        <td><%= link_to 'Show', exercise %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+<h2>exercises</h2>
 <%= link_to 'all', exercises_path %>
 <%= link_to 'Filter Upper Body', :filter => 'Upper Body' %>
 <%= link_to 'Filter Lower Body', :filter => 'Lower Body' %>
 <%= link_to 'Filter Core', :filter => 'Core' %>
 <%= link_to 'Filter Cardio', :filter => 'Cardio' %>
+<br/>
+<div class="container-fluid clearfix">
+    <div class="row clearfix">
+    <% @exercises.each do |exercise| %>
+      <div class="clearfix col-lg-3">
+        <p><%= image_tag exercise.image, :width => "200px",:height => "150px" %></p>
+        <h3><%= exercise.name %> </h3>
+        <p><%= exercise.description %></p>
+        <p><%= exercise.category %></p>
+        <p><%= link_to 'Show', exercise, :class => "btn btn-primary btn-sm btn-block" %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<br>
+
 
 
