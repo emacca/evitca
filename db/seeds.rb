@@ -21,7 +21,9 @@ Exercise.create(
 Exercise.create(
   :name => 'Bicep Curl',
   :image => 'http://www.menshealth.co.uk/cm/menshealthuk/images/pV/DB-bicep-curl-plan-b-13062012-de.jpg',
-  :description => 'The barbell curl specifically targets the biceps brachii which is located on the front part of the arm between the shoulder and the elbow.',
+  :description => 'The barbell curl specifically targets the biceps brachii which is located on the front part of the arm between the shoulder and the elbow.The barbell curl specifically targets the biceps brachii which is located on the front part of the arm between the shoulder and the elbow. 
+  The barbell curl specifically targets the biceps brachii which is located on the front part of the arm between the shoulder and the elbow.
+  The barbell curl specifically targets the biceps brachii which is located on the front part of the arm between the shoulder and the elbow.',
   :category => 'Upper Body'
 )
 
@@ -47,6 +49,40 @@ Exercise.create(
   :category => 'Lower Body'
 )
 
+Exercise.create(
+  :name => 'Sit Up',
+  :image => 'http://peakphysio.ie/wp-content/uploads/2013/05/sit-up.jpg',
+  :description => 'an exercise in which a person lies flat on the back, lifts the torso to a sitting position, and then lies flat again without changing the position of the legs: formerly done with the legs straight but now usu. done with the knees bent.',
+  :category => 'Core'
+)
+
+Exercise.create(
+  :name => 'Crunches',
+  :image => 'http://www.womenshealthmag.com/files/images/bootcamp-elbow-knee-crunch.jpg',
+  :description => 'A crunch begins with lying face up on the floor with knees bent. The movement begins by curling the shoulders towards the pelvis. The hands can be behind or beside the neck or crossed over the chest.',
+  :category => 'Core'
+)
+
+Exercise.create(
+  :name => 'Rower',
+  :image => 'http://www.mrtreadmill.com.au/images/R100APM-Infiniti-Iron-Woman-Rower.jpg',
+  :description => 'The rowing machine can be intimidating, but once you get the hang of it, its an effective way to spice up your cardio routine. ',
+  :category => 'Cardio'
+)
+
+Exercise.create(
+  :name => 'Spin Bike',
+  :image => 'http://www.exerciseequipmentwarehouse.com/blog/wp-content/uploads/2013/04/st.-helena-ca-spin-bike-store.jpg',
+  :description => 'Spinning classes or other indoor cycling workouts can be a great way to get in a vigorous workout -- burning calories and keeping your muscles in shape -- especially during the off-season. ',
+  :category => 'Cardio'
+)
+
+Exercise.create(
+  :name => 'Lunges',
+  :image => 'http://www.menshealth.co.uk/cm/menshealthuk/images/Xz/lunge-maximise-every-muscle-fricker-20042012-mdn.jpg',
+  :description => 'The lunge is a classic fitness exercise for the lower body, which help sth eflexibility of the hips and hamstrings, and the strength of the buttocks, hamstrings and hip flexors.',
+  :category => 'Lower Body'
+)
 ExerciseWorkout.create(
   :exercise_id => Exercise.first.id,
   :workout_id => Workout.first.id,

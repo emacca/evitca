@@ -13,11 +13,10 @@
 <div class="container-fluid clearfix exercises">
     <div class="row clearfix">
     <% @exercises.each do |exercise| %>
-      <div class="clearfix col-lg-3">
+      <div class="clearfix col-lg-3 col-xs-12">
         <p><%= image_tag exercise.image, :width => "200px",:height => "150px" %></p>
         <h3><%= exercise.name %> </h3>
-        <p><%= exercise.description %></p>
-        <p><%= exercise.category %></p>
+        <p><%= exercise.description.truncate(100) %></p>
         <p><%= link_to 'Show', exercise, :class => "btn btn-primary btn-sm btn-block" %></p>
       </div>
     <% end %>

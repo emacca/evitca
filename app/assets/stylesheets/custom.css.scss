@@ -301,7 +301,13 @@ footer{
   -webkit-transform: rotate(45deg);
   background-color:#fff;
 }
-
+.notices{
+  float: right;
+  margin-top: 30px;
+  position: absolute;
+  right: 200px;
+  top: 15px;
+}
 .notices .alert{
   padding: 18px;
   margin-bottom: 0px; 
@@ -338,7 +344,9 @@ footer{
   margin:0;
   padding:0;
 }
-
+.filtering a:hover{
+  background-color:#fff;
+}
 .back_buttons{
   float:right;
   margin-top:-9%;

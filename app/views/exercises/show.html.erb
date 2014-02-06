@@ -6,7 +6,7 @@
 </div>
 <div class="right_exercise_text col-lg-6">
 <h3><strong>How to:</strong></h3>
-  <p><%= @exercise.description %></p>
+  <p><%= simple_format(@exercise.description) %></p>
 
   <%= link_to 'Back', exercises_path, :class => "btn btn-default btn-sm" %>
 </div>

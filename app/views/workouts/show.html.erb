@@ -12,8 +12,8 @@
 
         <div class="exercise_information">
           <%= exercise_workout.exercise.name %>
-            <p>reps <%= exercise_workout.reps%></p>
-            <p>times <%= exercise_workout.times%></p>
+            <p><strong>Reps: </strong> <%= exercise_workout.reps%></p>
+            <p><strong>Times: </strong> <%= exercise_workout.times%></p>
             <%= link_to 'edit amount', edit_exercise_workout_path(exercise_workout), :class => "btn btn-default btn-sm" %>
         </div>
       </div>

@@ -1,5 +1,4 @@
-
-  <%= form_for(@workout) do |f| %>
+<%= form_for(@workout) do |f| %>
     <% if @workout.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
@@ -17,7 +16,7 @@
       <%= f.hidden_field :day, :class => "form-control" %><%= @workout.day %>
     </div>
     <div class="field form-group">
-      <%= f.label :name %><br>
+      <%= f.label 'Workout Name' %>
       <%= f.text_field :name, :class => "form-control" %>
     </div>
     
