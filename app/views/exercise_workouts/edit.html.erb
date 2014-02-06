@@ -1,5 +1,6 @@
-<h1>Editing exercise</h1>
- <div class="form clearfix">
+
+ <div class="form col-lg-6 col-lg-offset-3 clearfix">
+  <h1>Editing exercise</h1>
     <%= render 'form' %>
   <div class="back_buttons">
     <% Workout.find(params[:id]) do |workout|%>
@@ -7,3 +8,4 @@
     <% end %>
   </div>
 </div>
+<div class="clearfix"></div>
