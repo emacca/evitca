@@ -36,6 +36,19 @@ p{
   font-family:helvetica!important;
   font-weight:100;
 }
+h1{
+  font-family:Stroke;
+  text-transform:uppercase;
+  font-size:55px;
+  line-height:64px;
+}
+.btn-lg{
+  color:#fff;
+  text-transform:uppercase;
+}
+.btn-lg:visited{
+  color:#fff;
+}
 h3{
   font-family:Stroke;
   font-size:20px;
@@ -77,6 +90,15 @@ font-family: Conv_Track;
 .col-lg-3{
   border-right:1px solid #ccc;
   border-bottom:1px solid #ccc;
+  min-height:400px;
+}
+.col-lg-3 a{
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+}
+.images_home img{
+  padding-bottom:30px;
 }
 .row{
   margin-top:5%;

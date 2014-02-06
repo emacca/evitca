@@ -1,17 +1,13 @@
+<div class="row clearfix">
+<div class="left_exercise_image col-lg-6">
+<h2><%= @exercise.name %></h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @exercise.name %>
-</p>
+<p><%= image_tag @exercise.image, :width => "80%" %></p>
+</div>
+<div class="right_exercise_text col-lg-6">
+<h3><strong>How to:</strong></h3>
+  <p><%= @exercise.description %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @exercise.image %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @exercise.description %>
-</p>
-
-<%= link_to 'Back', exercises_path, :class => "btn btn-default btn-sm" %>
+  <%= link_to 'Back', exercises_path, :class => "btn btn-default btn-sm" %>
+</div>
+</div>
