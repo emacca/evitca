@@ -7,7 +7,7 @@
           <h3><%= workout.day %></h3>
           <h4><%= workout.name %></h4>
           <% workout.exercises.each do |exercise| %>
-          <p class="hidden-phone"><%= exercise.name%></p>
+          <p><%= exercise.name%></p>
           <% end %>
           <div class="buttons_bottom">
           <p><%= link_to 'View Workout', workout, :class => "btn btn-default btn-sm btn-block" %>
