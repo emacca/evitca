@@ -1,6 +1,9 @@
 <h1>Editing exercise</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @exercise %> |
-<%= link_to 'Back', exercises_path %>
+ <div class="form clearfix">
+    <%= render 'form' %>
+  <div class="back_buttons">
+    <% Workout.find(params[:id]) do |workout|%>
+    <%= link_to 'Back', workout_path(workout),  :class => "btn btn-default" %>
+    <% end %>
+  </div>
+</div>

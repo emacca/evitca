@@ -1,34 +1,34 @@
-<%= form_for(@workout) do |f| %>
-  <% if @workout.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
 
-      <ul>
-      <% @workout.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <%= form_for(@workout) do |f| %>
+    <% if @workout.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
+
+        <ul>
+        <% @workout.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= f.label :day %>
+      <%= f.hidden_field :day, :class => "form-control" %><%= @workout.day %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, :class => "form-control" %>
+    </div>
+    
+    <div class="field form-group">
+      <%= f.label :exercises %><br>
+        <% @exercises.each do |exercise|%>
+        <p><%= check_box_tag :exercise_ids, exercise.id, @workout.exercises.include?(exercise), :name => 'workout[exercise_ids][]'  %> <%= exercise.name %></p>
+        <% end %>
+      </div>
+    
+    <div class="actions form-group">
+      <%= f.submit "update",  :class => "btn btn-primary" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :day %><br>
-    <%= f.text_field :day %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :exercises %><br>
-      <% @exercises.each do |exercise|%>
-      <%= exercise.name %>
-      <%= check_box_tag :exercise_ids, exercise.id, @workout.exercises.include?(exercise), :name => 'workout[exercise_ids][]'  %>
-      <% end %>
-    </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

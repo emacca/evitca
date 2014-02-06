@@ -1,5 +1,5 @@
 <h2>my workouts</h2>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <% @workouts.each do |workout| %>
 
@@ -10,8 +10,8 @@
           <p><%= exercise.name %></p>
           <% end %>
           <div class="buttons_bottom">
-          <p><%= link_to 'Show', workout, :class => "btn btn-default btn-sm btn-block" %>
-          <%= link_to 'Edit', edit_workout_path(workout), :class => "btn btn-default btn-sm btn-block" %></p>
+          <p><%= link_to 'View Workout', workout, :class => "btn btn-default btn-sm btn-block" %>
+          <%= link_to 'Edit Workout', edit_workout_path(workout), :class => "btn btn-default btn-sm btn-block" %></p>
           </div>
         </div>
       

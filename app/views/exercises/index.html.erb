@@ -1,11 +1,16 @@
-<h2>exercises</h2>
-<%= link_to 'all', exercises_path %>
-<%= link_to 'Filter Upper Body', :filter => 'Upper Body' %>
-<%= link_to 'Filter Lower Body', :filter => 'Lower Body' %>
-<%= link_to 'Filter Core', :filter => 'Core' %>
-<%= link_to 'Filter Cardio', :filter => 'Cardio' %>
-<br/>
-<div class="container-fluid clearfix">
+<div class="exercise_listing_nav clearfix">
+  <div class="header_exercise">
+    <h2>exercises</h2>
+  </div>
+    <div class="filtering">
+      <%= link_to 'all', exercises_path %>|
+      <%= link_to 'Filter Upper Body', :filter => 'Upper Body' %>|
+      <%= link_to 'Filter Lower Body', :filter => 'Lower Body' %>|
+      <%= link_to 'Filter Core', :filter => 'Core' %>|
+      <%= link_to 'Filter Cardio', :filter => 'Cardio' %>|
+    </div>
+</div>
+<div class="container-fluid clearfix exercises">
     <div class="row clearfix">
     <% @exercises.each do |exercise| %>
       <div class="clearfix col-lg-3">

@@ -10,19 +10,19 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :name %><br>
-  <%= f.hidden_field :name, value: @exercise_workouts.exercise.id %><%= @exercise_workouts.exercise.name%>  
+  <div class="field form-group">
+    <%= f.label :name %>
+  <%= f.hidden_field :name, value: @exercise_workouts.exercise.id, :class => "form-control" %><%= @exercise_workouts.exercise.name%>  
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :reps %><br>
-    <%= f.number_field :reps %>
+    <%= f.number_field :reps, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :times %><br>
-    <%= f.number_field :times %>
+    <%= f.number_field :times, :class => "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "update", :class => "btn btn-primary" %>
   </div>
 <% end %>

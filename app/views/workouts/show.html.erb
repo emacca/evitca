@@ -1,25 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="one_workout">
+  <h3><%= @workout.day %></h3>
 
-<p>
-  <strong>Day:</strong>
-  <%= @workout.day %>
-</p>
+  <h4><%= @workout.name %></h4>
 
-<p>
-  <strong>Name:</strong>
-  <%= @workout.name %>
-</p>
-
-<p>
-  <strong>Exercises:</strong>
   <% @workout.exercise_workouts.each do |exercise_workout| %>
-        <td><%= link_to exercise_workout.exercise.name, exercise_path(exercise_workout.exercise) %></td>
-        <p><%= exercise_workout.reps%></p>
-        <p><%= exercise_workout.times%></p>
-        <p><%= link_to 'add', edit_exercise_workout_path(exercise_workout) %></p>
+      
+      <div class="exercise clearfix">
+        <div class="exercise_image">
+          <%= image_tag exercise_workout.exercise.image, :width => "250px", :height => "200px"%>
+        </div>
 
-        <% end %>
-</p>
+        <div class="exercise_information">
+          <%= exercise_workout.exercise.name %>
+            <p>reps <%= exercise_workout.reps%></p>
+            <p>times <%= exercise_workout.times%></p>
+            <%= link_to 'edit amount', edit_exercise_workout_path(exercise_workout), :class => "btn btn-default btn-sm" %>
+        </div>
+      </div>
+  
+  <% end %>
 
-<%= link_to 'Edit', edit_workout_path(@workout) %> |
-<%= link_to 'Back', workouts_path %>
+  <div class="one_workout_edit_buttons">
+    <%= link_to 'Add Exercises', edit_workout_path(@workout), :class => "btn btn-default btn-sm" %>
+    <%= link_to 'My Workouts', workouts_path, :class => "btn btn-default btn-sm" %>
+  </div>
+</div>
