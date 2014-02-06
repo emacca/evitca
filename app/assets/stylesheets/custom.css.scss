@@ -11,23 +11,25 @@
 
 @font-face {
   font-family: 'Conv_Track';
-  src: asset-url('/assets/track/Track.eot');
-  src: asset-url('/assets/track/Track.eot?#iefix') format('eot'),
-       asset-url('/assets/track/Track.woff') format('woff'), 
-       asset-url('/assets/track/Track.ttf') format('truetype'), 
-       asset-url('/assets/track/Track.svg') format('svg');
-       asset-weight: normal;
-       asset-style: normal;
+  src: url(font-path('track/Track.eot'));
+  src: url(font-path('track/Track.eot?#iefix')),
+       url(font-path('track/Track.woff')), 
+       url(font-path('track/Track.ttf')), 
+       url(font-path('track/Track.svg'));
+       weight: normal;
+       style: normal;
 }
+
+
 @font-face {
   font-family: 'Stroke';
-  src: asset-url('/assets/stroke/Stroke-Light.eot');
-  src: asset-url('/assets/stroke/Stroke-Light.eot?#iefix') format('eot'),
-       asset-url('/assets/stroke/Stroke-Light.woff') format('woff'), 
-       asset-url('/assets/stroke/Stroke-Light.ttf') format('truetype'), 
-       asset-url('/assets/stroke/Stroke-Light.svg') format('svg');
-       asset-weight: normal;
-       asset-style: normal;
+  src: url('stroke/Stroke-Light.eot');
+  src: url('stroke/Stroke-Light.eot?#iefix') format('eot'),
+       url('stroke/Stroke-Light.woff') format('woff'), 
+       url('stroke/Stroke-Light.ttf') format('truetype'), 
+       url('stroke/Stroke-Light.svg') format('svg');
+       weight: normal;
+       style: normal;
 }
 
 p{
