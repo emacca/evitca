@@ -23,11 +23,11 @@
 
 @font-face {
   font-family: 'Stroke';
-  src: url('stroke/Stroke-Light.eot');
-  src: url('stroke/Stroke-Light.eot?#iefix') format('eot'),
-       url('stroke/Stroke-Light.woff') format('woff'), 
-       url('stroke/Stroke-Light.ttf') format('truetype'), 
-       url('stroke/Stroke-Light.svg') format('svg');
+  src: url(font-path('stroke/Stroke-Light.eot');
+  src: url(font-path('stroke/Stroke-Light.eot?#iefix')),
+       url(font-path('stroke/Stroke-Light.woff')), 
+       url(font-path('stroke/Stroke-Light.ttf')), 
+       url(font-path('stroke/Stroke-Light.svg'));
        weight: normal;
        style: normal;
 }
