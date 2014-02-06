@@ -3,7 +3,7 @@
     <div class="row">
       <% @workouts.each do |workout| %>
 
-          <div class="col-sm-1 col-md-1 col-lg-1 workout_home">
+          <div class="col-lg-1 workout_home">
           <h3><%= workout.day %></h3>
           <h4><%= workout.name %></h4>
           <% workout.exercises.each do |exercise| %>
