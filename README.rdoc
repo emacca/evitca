@@ -6,5 +6,8 @@ The application allows people to have a digital and mobile version of their exer
 == RUBY VERSION
   ruby 2.1.0p0 
 
+== DATABASE
+  psql (PostgreSQL) 9.3.1
+  
 == RUN TEST
 Please view the site at evitca.herokuapp.com
