@@ -7,6 +7,6 @@ Evitca::Application.routes.draw do
 
   root :to => 'pages#home'
 
-    get ':action' => "pages#:action"
+  get ':action' => "pages#:action"
 
 end

@@ -41,15 +41,6 @@ class WorkoutsController < ApplicationController
     end
   end
 
-  # DELETE /workouts/1
-  # DELETE /workouts/1.json
-  # def destroy
-  #   @workout.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to workouts_url }
-  #     format.json { head :no_content }
-  #   end
-  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

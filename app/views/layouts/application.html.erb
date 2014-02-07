@@ -11,30 +11,25 @@
 <body>
 
   <div class="container">
-          <div class="notices">
-        <% if notice %><p class="alert alert-notice"><%= notice %></p>
-        <% end %>
-        <% if alert %><p class="alert alert-error"><%= alert %></p>
-        <% end %>
-      </div>
-      <%= render partial: 'shared/user_sign'%>
-
-  
-  <header>
-    <%= render partial: 'shared/header' %>
-    
-  </header>
-
+    <div class="notices">
+      <% if notice %><p class="alert alert-notice"><%= notice %></p>
+      <% end %>
+      <% if alert %><p class="alert alert-error"><%= alert %></p>
+      <% end %>
+    </div>
+    <%= render partial: 'shared/user_sign'%>
+    <header>
+      <%= render partial: 'shared/header' %>
+    </header>
   <nav class="cl-effect-13">
     <%= render partial: 'shared/nav' %>
   </nav>
-  
   <%= yield %>
-  
   <footer>
     <div class="triangle"></div>
-    <%= render partial: 'shared/footer' %>
+     <%= render partial: 'shared/footer' %>
   </footer>
   </div>
 </body>
 </html>
+ 
