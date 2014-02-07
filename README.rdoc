@@ -1,10 +1,10 @@
-== README
-
-==ABOUT
+== ABOUT
 Evitca is an intuitive fitness appliaciton, that allows users to create custom workouts for each day of the week. They have the ability to create custom workout names and add a variety of exercises to any workout. Users can view the exercises within the dtatabse and also customise each exercise to have a specific amount of reps and amounts for each exercise. 
+
+The application allows people to have a digital and mobile version of their exercise routine/workout with them anywhere and at any time. This allows people to carry thier custom workouts with them to the gym.
 
 == RUBY VERSION
   ruby 2.1.0p0 
 
-==RUN TEST
+== RUN TEST
 Please view the site at evitca.herokuapp.com
