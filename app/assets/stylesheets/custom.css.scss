@@ -116,6 +116,9 @@ font-family: Conv_Track;
   padding-left:15px;
   padding-right:15px;
 }
+.workout_names{
+  height:80px;
+}
 .workout_home h3{
   font-family:Conv_Track;
 }
@@ -378,7 +381,25 @@ footer{
   font-family:Stroke;
   padding-bottom:20px;
 }
+.about_right{
+  border:10px solid #ccc;
+  float:right;
+  margin-top:50px;
+  color:#18a9ad;
+  text-align:left;
+  padding:20px;
+}
+.about_right h3{
+  margin-top:0;
+}
 
+.about_us p{
+  line-height:2;
+  font-size:14px;
+}
+.about_us h3{
+  font-size:25px;
+}
 @media (max-width: $screen-xs-max) { 
 .workout_home{
   width:100%;
