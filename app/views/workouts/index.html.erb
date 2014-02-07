@@ -3,12 +3,16 @@
     <div class="row">
       <% @workouts.each do |workout| %>
 
-          <div class="col-lg-1 workout_home">
+          <div class="workout_home clearfix">
           <h3><%= workout.day %></h3>
           <h4><%= workout.name %></h4>
+          <div class="exercise_info_workout clearfix">
           <% workout.exercises.each do |exercise| %>
           <p><%= exercise.name%></p>
           <% end %>
+          <div class="clearfix"></div>
+          </div>
+          
           <div class="buttons_bottom">
           <p><%= link_to 'View Workout', workout, :class => "btn btn-default btn-sm btn-block" %>
           <%= link_to 'Edit Workout', edit_workout_path(workout), :class => "btn btn-default btn-sm btn-block" %></p>
