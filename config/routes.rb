@@ -5,8 +5,9 @@ Evitca::Application.routes.draw do
   resources :workouts
   resources :exercise_workouts
 
+  
   root :to => 'pages#home'
 
-  get ':action' => "pages#:action"
+  get '/:action' => "pages#:action"
 
 end
