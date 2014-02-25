@@ -36,8 +36,8 @@ end
 gem 'devise'
 
 #pry
-gem 'pry'
-gem 'pry-debugger'
+# gem 'pry'
+# gem 'pry-debugger'
 
 #bootstrap
 gem 'bootstrap-sass'
