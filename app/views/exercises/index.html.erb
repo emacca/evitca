@@ -13,7 +13,7 @@
 <div class="container-fluid clearfix exercises">
     <div class="row clearfix">
     <% @exercises.each do |exercise| %>
-      <div class="clearfix col-lg-3 col-xs-12">
+      <div class="clearfix col-lg-3 col-md-3 col-sm-4 col-xs-12">
         <p><%= image_tag exercise.image, :width => "200px",:height => "150px" %></p>
         <h3><%= exercise.name %> </h3>
         <p><%= exercise.description.truncate(100) %></p>

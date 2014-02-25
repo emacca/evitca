@@ -407,4 +407,19 @@ footer{
   width:100%;
   border-bottom:1px solid #ccc;
 }
+  h1{
+    font-size: 47px;
+  }
+}
+
+@media (max-width: $screen-sm-max){
+  .workout_names h3{
+    font-size:12px;
+  }
+  .buttons_bottom a{
+    font-size: 11px;
+  }
+  h1{
+    font-size: 47px;
+  }
 }
